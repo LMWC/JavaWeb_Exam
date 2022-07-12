@@ -1,0 +1,9 @@
+DROP DATABASE IF EXISTS webZongHe;
+CREATE DATABASE webZongHe CHARACTER SET utf8;
+USE webZongHe;
+CREATE TABLE Users(
+id INT,
+username VARCHAR(20),
+pwd VARCHAR(20)
+);
+INSERT INTO Users(id,username,pwd) VALUES(1,'уехЩ','123');

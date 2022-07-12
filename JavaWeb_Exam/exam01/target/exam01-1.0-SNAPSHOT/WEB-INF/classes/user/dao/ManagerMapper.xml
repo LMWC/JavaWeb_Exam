@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+实体类的映射文件
+namespace 指定接口的类全名
+-->
+<mapper namespace="user.dao.ManagerMapper">
+    <!--
+    查询语句
+    id: 接口中方法的名字
+    resultType：返回的实体类的类型，类全名
+    -->
+    <select id="findUserByNameAndPassword" parameterType="manager"  resultType="user.bean.Manager" >
+        SELECT * FROM Users WHERE username = #{username} AND pwd = #{password}
+    </select>
+
+
+    <select id="findUserByNameAndPassword1" parameterType="string"  resultType="user.bean.Manager" >
+        SELECT * FROM Users WHERE username = #{username}
+    </select>
+</mapper>
